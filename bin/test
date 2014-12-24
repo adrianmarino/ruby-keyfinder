@@ -1,2 +1,1 @@
-#!/bin/bash
-./run_code.rb 'djV11Xbc914'
+./find_key_of.rb djV11Xbc914
