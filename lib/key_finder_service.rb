@@ -1,7 +1,7 @@
 class KeyFinderService
 
   def key_of(a_video_hash)
-    video_filename = @video_service.download video_id
+    video_filename = @video_service.download a_video_hash
     find video_filename
   end
 

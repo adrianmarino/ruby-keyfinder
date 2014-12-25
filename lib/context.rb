@@ -9,5 +9,3 @@ class Context
   end
 
 end
-
-CONTEXT = Context.instance

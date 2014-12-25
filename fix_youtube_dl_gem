@@ -1,0 +1,16 @@
+#!/bin/bash
+# ------------------------------------------------------------------------------
+# Variables
+# ------------------------------------------------------------------------------
+RUBY_VERSION="$(cat .ruby-version)"
+GEMSET="$(cat .ruby-gemset)"
+FILENAME="youtube-dl"
+YOUTUBE_DL_VERSION="$(cat Gemfile | grep youtube_dl | awk '{print $3}' | tr -d "'")"
+URL="https://yt-dl.org/downloads/2014.12.17.2/youtube-dl"
+
+# ------------------------------------------------------------------------------
+# Main
+# ------------------------------------------------------------------------------
+wget $URL
+cp -v $FILENAME $HOME/.rvm/gems/$RUBY_VERSION@$GEMSET/gems/youtube_dl-$YOUTUBE_DL_VERSION/bin/
+rm -v $FILENAME
