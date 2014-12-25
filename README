@@ -1,3 +1,10 @@
-Youtube_dl gem: UTF8 error to download video
+
+ Requisites
 --------------------------------------------------------------------------------
-run : ./fix_youtube_dl_gem
+ 1. Wine
+ 2. Run : ./fix_youtube_dl_gem
+
+ Test
+--------------------------------------------------------------------------------
+ $ cd bin
+ $ ./test
