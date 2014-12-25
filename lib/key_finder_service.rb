@@ -7,7 +7,9 @@ class KeyFinderService
 
   private
   def find(a_filename)
-    `wine #{path 'KeyFinder.exe'} -f #{path a_filename}`
+    key = `wine #{path 'KeyFinder.exe'} -f #{path a_filename}`
+    `rm -f #{path a_filename}`
+    key
   end
 
   def path(a_filename)

@@ -1,4 +1,7 @@
 #!/usr/bin/env ruby
 require './libs'
 
-puts "Result key: #{CONTEXT.key_finder.key_of(ARGV.first)}\n"
+video_hash = ARGV.first
+key = CONTEXT.key_finder.key_of(video_hash)
+
+puts "Key of '#{video_hash}' youtube video hash is: #{key}\n"
