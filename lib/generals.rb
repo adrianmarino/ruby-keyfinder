@@ -9,8 +9,8 @@ require "singleton"
 # Add requiere for gems in Gemfile
 Bundler.require
 
-Bundler.setup(:development) if ENV['ENVIRONMENT'] == 'development'
-Bundler.setup(:test) if ENV['ENVIRONMENT'] == 'test'
+Bundler.setup(:development) if ENV['ENV'] == 'development'
+Bundler.setup(:test) if ENV['ENV'] == 'test'
 
 require_all "#{ROOT_DIR}/lib"
 require_all "#{ROOT_DIR}/config"
