@@ -1,1 +1,2 @@
+export ENV=test
 ./find_key_of.rb djV11Xbc914
