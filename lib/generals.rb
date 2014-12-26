@@ -26,6 +26,6 @@ require_all "#{ROOT_DIR}/lib"
 require_all "#{ROOT_DIR}/config"
 
 # ----------------------------------------------------------------------------
-# Project setup
+# Project initialize
 # ----------------------------------------------------------------------------
 CONTEXT = Context.instance

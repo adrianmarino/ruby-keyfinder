@@ -1,14 +1,23 @@
 class VideoService
 
+  #------------------------------------------------------------------------------
+  # Public Methods
+  #------------------------------------------------------------------------------
+
   def download(a_video_hash)
     create.download a_video_hash
   end
 
   def create
-    VideoDownloader.new(@tmp_path)
+    VideoDownloader.new(@download_path)
   end
 
-  def initialize(a_tmp_path)
-    @tmp_path = a_tmp_path
+  #------------------------------------------------------------------------------
+  # Initialize
+  #------------------------------------------------------------------------------
+
+  def initialize(a_download_path)
+    @download_path = a_download_path
   end
+
 end
