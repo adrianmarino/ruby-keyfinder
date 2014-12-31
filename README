@@ -1,13 +1,9 @@
 
- Requisites
---------------------------------------------------------------------------------
+# Requisites
  1. Install wine emulator:
     * Debian: $ sudo apt-get install wine
     * Arch: $ pacman -S wine
- 2. Fix youtube_dl gem runing next command:
-    $ ./fix_youtube_dl_gem
+ 2. Fix youtube_dl gem runing next command: $ ./fix_youtube_dl_gem
 
- Test
---------------------------------------------------------------------------------
-Run test:
-$ rake test
+# Test
+* Run test: $ rake test
