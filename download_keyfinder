@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Download Key finder..."
+wget http://www.ibrahimshaath.co.uk/keyfinder/bins/KeyFinder-WIN.zip
+unzip KeyFinder-WIN.zip
+mv KeyFinder-WIN keyfinder
+rm -rf KeyFinder-WIN*

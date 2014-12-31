@@ -11,6 +11,7 @@ URL="https://yt-dl.org/downloads/2014.12.17.2/youtube-dl"
 # ------------------------------------------------------------------------------
 # Main
 # ------------------------------------------------------------------------------
+echo "Fix bug on youtube_dl gem..."
 wget $URL
 cp -v $FILENAME $HOME/.rvm/gems/$RUBY_VERSION@$GEMSET/gems/youtube_dl-$YOUTUBE_DL_VERSION/bin/
 rm -v $FILENAME

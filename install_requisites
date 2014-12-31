@@ -1,0 +1,5 @@
+#!/bin/bash
+bundle
+bash fix_youtube_dl_gem
+bash download_keyfinder
+sudo apt install wine
