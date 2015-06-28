@@ -1,29 +1,18 @@
-require "logger"
+require 'logger'
 
 class LoggerFactory
-	include Singleton
+  include Singleton
 
-	#------------------------------------------------------------------------------
-	# Attributes
-	#------------------------------------------------------------------------------
+  attr_reader :logger
 
-	attr_reader :logger
+  def initialize
+    create_log_path
+    @logger = Logger.new AppConfig::LOGGER_FILE_NAME
+  end
 
-	#------------------------------------------------------------------------------
-	# Private Methods
-	#------------------------------------------------------------------------------
+  private
 
-	private
-	def create_log_path
-		FileHelper.create_path AppConfig::LOGGER_PATH
-	end
-
-	#------------------------------------------------------------------------------
-	# Initialize
-	#------------------------------------------------------------------------------
-
-	def initialize
-		create_log_path
-		@logger = Logger.new AppConfig::LOGGER_FILE_NAME
-	end
+  def create_log_path
+    FileHelper.create_path AppConfig::LOGGER_PATH
+  end
 end

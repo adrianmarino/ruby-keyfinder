@@ -3,8 +3,8 @@
 # ----------------------------------------------------------------------------
 require 'rubygems'
 require 'bundler/setup'
-require "require_all"
-require "singleton"
+require 'require_all'
+require 'singleton'
 
 # ----------------------------------------------------------------------------
 # Bundle require

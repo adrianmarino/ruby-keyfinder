@@ -1,5 +1,5 @@
 ENV['ENV'] ||= 'test'
 
-ROOT_DIR="."
+ROOT_DIR = '.'
 require "#{ROOT_DIR}/lib/generals"
-require "test/unit"
+require 'test/unit'
