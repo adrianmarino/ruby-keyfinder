@@ -12,6 +12,7 @@ group :development,:test do
   gem 'pry-exception_explorer'
   gem 'pry-rescue'
   gem 'bond'
+  gem 'test-unit'
 end
 
 gem 'youtube_dl', '0.0.2'
