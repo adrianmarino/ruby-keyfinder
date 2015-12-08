@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'require_all'
+gem 'activesupport'
+gem 'youtube_dl', '0.0.2'
 
 group :development,:test do
   # Debugger
@@ -14,5 +16,3 @@ group :development,:test do
   gem 'bond'
   gem 'test-unit'
 end
-
-gem 'youtube_dl', '0.0.2'

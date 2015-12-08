@@ -31,18 +31,18 @@ end
     ```
     $ ./fix_youtube_dl_gem
     ```
-3. Run: 
+3. Run:
    ```
    ./download_keyfinder
    ```
 
-To fast requisites installation run (Only for Debian): 
+To fast requisites installation run (Only for Debian):
 ```
-$ ./install_requisites 
+$ ./install_requisites
 ```
 
 # Test
 Run test:
 ```
-$ rake test
+$ rake
 ```
