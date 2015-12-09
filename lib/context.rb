@@ -4,7 +4,6 @@ class Context
   attr_reader :key_finder
 
   def initialize
-    @video_service = VideoService.new(AppConfig::KEY_FINDER_PATH)
-    @key_finder = KeyFinderService.new(AppConfig::KEY_FINDER_PATH, @video_service)
+    @key_finder ||= KeyFinderService.new(VideoService.new(AppConfig::TMP_PATH))
   end
 end

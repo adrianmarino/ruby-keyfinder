@@ -4,8 +4,8 @@ module AppConfig
 	# Paths
 	# ----------------------------------------------------------------------------
 
-	KEY_FINDER_PATH = "#{ROOT_DIR}/keyfinder"
+	TMP_PATH = "#{ROOT_DIR}/tmp"
 	LOGGER_PATH = "#{ROOT_DIR}/log"
-	LOGGER_FILE_NAME = "#{LOGGER_PATH}/main.log"
+	LOGGER_FILE_PATH = "#{LOGGER_PATH}/main.log"
 
 end

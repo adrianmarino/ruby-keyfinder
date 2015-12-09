@@ -1,27 +1,20 @@
 class KeyFinderService
-  def initialize(a_finder_path, a_video_service)
-    @finder_path = a_finder_path
-    @video_service = a_video_service
+  def initialize(video_service)
+    @video_service = video_service
   end
 
-  def key_of(a_video_hash)
-    video_filename = @video_service.download a_video_hash
-    find video_filename
+  def key_of(video_hash)
+    video_path = @video_service.download(video_hash)
+    audio_path = Transcoder.mp4_to_mp3(video_path)
+    key = find_key(audio_path)
+    FileHelper.delete([video_path, audio_path])
+    App.logger.debug("Video: #{video_hash}, Key: #{key}")
+    key
   end
 
   private
 
-  def find(a_filename)
-    key = run_key_finder_for a_filename
-    FileHelper.delete path a_filename
-    key
-  end
-
-  def run_key_finder_for(a_filename)
-    `wine #{path 'KeyFinder.exe'} -f #{path a_filename}`
-  end
-
-  def path(a_filename)
-    "#{@finder_path}/#{a_filename}"
+  def find_key(audio_path)
+    `keyfinder-cli #{audio_path}`.strip
   end
 end

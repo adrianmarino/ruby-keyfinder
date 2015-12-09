@@ -1,9 +1,11 @@
 module FileHelper
-  def self.delete(a_path)
-    File.delete(a_path) if File.exist?(a_path)
+  extend self
+
+  def delete(paths)
+    Array(paths).each { |path| File.delete(path) if File.exist?(path) }
   end
 
-  def self.create_path(a_path)
-    FileUtils.mkdir_p(a_path) unless File.exist?(a_path)
+  def create_path(path)
+    FileUtils.mkdir_p(path) unless File.exist?(path)
   end
 end

@@ -9,6 +9,6 @@ class KeyFinderServiceTest < Test::Unit::TestCase
     key = CONTEXT.key_finder.key_of(video_hash)
 
     # Assert
-    assert_equal 'E', key
+    assert_equal 'A', key
   end
 end
