@@ -1,5 +1,5 @@
 # Ruby Key Finder
-This program allow determitate the key of a youtube video by the id of the video.
+This program allow determinate the key of a youtube video by the id of the video.
 Look at the next test, to understand how it works:
 
 ```Ruby
