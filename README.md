@@ -46,3 +46,7 @@ Run test:
 ```
 $ rake
 ```
+
+# License
+
+ruby-keyfinder is released under the [MIT License](http://www.opensource.org/licenses/MIT).
